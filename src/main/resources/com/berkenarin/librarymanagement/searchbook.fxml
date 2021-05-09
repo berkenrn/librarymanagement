@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="401.0" prefWidth="504.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.berkenarin.librarymanagement.SearchBookController">
+   <fx:define>
+        <ToggleGroup fx:id="group" />
+    </fx:define>
+   <children>
+      <TextField fx:id="keyword" layoutX="179.0" layoutY="48.0" promptText="Keyword" />
+      <Button layoutX="227.0" layoutY="126.0" mnemonicParsing="false" onAction="#onSearchClick" text="Search" />
+      <RadioButton fx:id="isbn" layoutX="167.0" layoutY="89.0" mnemonicParsing="false" text="ISBN" toggleGroup="$group"/>
+      <RadioButton fx:id="title" layoutX="225.0" layoutY="89.0" mnemonicParsing="false" text="Title" toggleGroup="$group" />
+      <RadioButton fx:id="author" layoutX="280.0" layoutY="89.0" mnemonicParsing="false" text="Author" toggleGroup="$group" />
+       <TableView layoutX="14.0" layoutY="177.0" prefHeight="211.0" prefWidth="480.0" fx:id="resultList"/>
+   </children>
+</AnchorPane>
